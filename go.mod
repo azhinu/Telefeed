@@ -1,4 +1,7 @@
+module github.com/azhinu/Telefeed
 replace (
-  github.com/go-redis/redis => github.com/go-redis/redis/v7 latest
-  github.com/azhinu/Telefeed/params => ../params
+  github.com/azhinu/Telefeed/params => ./params
+)
+require (
+      github.com/go-redis/redis/v7 v7.4.0
 )
