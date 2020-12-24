@@ -54,9 +54,8 @@ http://telegra.ph/telefeedbot-05-12
 5. Замените значение файла `server/vk_tokens.bot`значением из пункта 2.6.
 6. Находясь в корневом каталоге репозитория произведите следующие действия:
 ```shell
-go get ./...
-mkdir /usr/local/bin/telefeed
-cp server/{tokens.bot,telefeed.bot} /usr/local/bin/telefeed/
+mkdir -p /usr/local/bin/telefeed
+cp server/{vk_tokens.bot,telefeed.bot} /usr/local/bin/telefeed/
 go build -o /usr/local/bin/telefeed/ server/boltsrv.go
 go build -o /usr/local/bin/telefeed/ server/tgsrv.go
 go build -o /usr/local/bin/telefeed/ server/postsrv.go

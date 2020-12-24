@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/boltdb/bolt"
-	"github.com/recoilme/tf/boltapi"
+	"github.com/azhinu/Telefeed/boltapi"
 )
 
 var boltdb *bolt.DB
