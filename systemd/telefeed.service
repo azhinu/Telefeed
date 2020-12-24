@@ -1,0 +1,18 @@
+[Unit]
+Description=Telefeed
+After=redis.service
+
+[Service]
+Type=forking
+WorkingDirectory=/usr/local/bin/telefeed/
+
+ExecStartPre=/usr/local/bin/telefeed/boltsrv
+ExecStart=/usr/local/bin/telefeed/tgsrv
+ExecStartPost=/usr/local/bin/telefeed/postsrv publics
+ExecStartPost=/usr/local/bin/telefeed/postsrv feeds
+
+KillMode=process
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
